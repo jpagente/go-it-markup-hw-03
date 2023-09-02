@@ -111,11 +111,11 @@ address {
     line-height: 1.5em;
     letter-spacing: 0.64px;
     padding: 16px 32px;
-    display: inline-block;
     gap: 10px;
-    /* mentor radh, please help me with this to align */
-    margin-left: 500px;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
 }
 .hero-cta:hover{
 background-color: var(--ocean);
