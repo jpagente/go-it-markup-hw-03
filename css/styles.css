@@ -23,14 +23,6 @@ button {
 address {
     font-size: normal;
 } 
-ul, li {
-    margin-top: 0;
-    margin-left: 0;
-}
-ul {
-    margin-top: 0;
-    margin-bottom: 0;
-}
 :root {
 --iris: #4D5AE5;
 --ocean: #404BBF;
@@ -45,29 +37,25 @@ ul {
 --white :#FFFFFF;
 --dairy :#FCFCFC;
 }
+.container {
+    width: 1158px;
+    margin: 0 auto;
+}
+.main-header-container {
+    display: flex;
+    justify-content: space-between;
+}
 .header {
     background-color: var(--white);
     border-bottom: 1px solid var(--cornflower);
-    width: 1440px;
-    display: flex;
+    padding: 24px 0;
 }
 .nav {
-    display: flex;
-}
-.nav-logo {
-    margin-top: 25.5px;
-    margin-bottom: 25.5px;
-    margin-left: 156px; 
-    margin-right: 76px;
-    display: flex;
-    align-items: center;
-    flex-shrink: 0;
+    display: inline-flex;
+    gap: 76px;
 }
 .nav-list {
-    margin-top: 24px;
-    margin-bottom: 24px;
-    display: inline-flex;
-    align-items: flex-start;
+    display: flex;
     gap: 40px;
 }
 .nav-list-item-link {
@@ -90,20 +78,13 @@ ul {
     line-height: 1.5em;
     letter-spacing: 0.32px;
 }
-.address{
-    margin-top: 24px; 
-    margin-bottom: 24px;
-    margin-left: 332px;
-    margin-right: 156px;
-}
-.address-list{
+.address-list {
     display: flex;
     gap: 40px;
-}
+} 
 .hero {
-    width: 1440px;
-    height: 600px;
-    flex-shrink: 0;
+    padding-top: 101.5px;
+    padding-bottom: 100px;
     background: var(--grey);
 }
 .hero-heading {
@@ -112,10 +93,13 @@ ul {
     font-size: 56px;
     line-height: 1.07143em;
     letter-spacing: 1.12px;
-
     text-align: center;
+    margin-bottom: 48px;
+
+}
+.hero-container {
     padding-top: 188px;
-    padding-bottom: 48px;
+    padding-bottom: 292px;
 }
 .hero-cta {
     border-radius: 4px;
@@ -127,34 +111,26 @@ ul {
     line-height: 1.5em;
     letter-spacing: 0.64px;
     padding: 16px 32px;
-
-    display: inline-flex;
-    align-items: flex-start;
+    display: inline-block;
     gap: 10px;
-    margin-left: 636px;
+    /* mentor radh, please help me with this to align */
+    margin-left: 500px;
+
 }
 .hero-cta:hover{
 background-color: var(--ocean);
 }
 .feature {
     background-color: var(--white);
-    color: var(--navy-blue);
-
+    color: var(--navy-blue); 
+}
+.feature-container {
     padding-top: 120px;
     padding-bottom: 120px;
 }
 .feature-list {
     display: flex;
     gap: 24px;
-}
-.content-container {
-    width:1128px;
-    height: 104px;
-    margin-left: 156px;
-    margin-right: 156px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
 }
 .feature-text {
     background-color: var(--white);
@@ -175,9 +151,10 @@ background-color: var(--ocean);
 }
 .product {
     background-color: var(--white);
+}
+.product-container {
     padding-top: 0;
     padding-bottom: 120px;
-    margin-top: 0;
 }
 .product-header-text{
     background-color: var(--white);
@@ -190,12 +167,13 @@ background-color: var(--ocean);
 }
 .product-list {
     display: inline-flex;
-    padding-top: 72px;
-    margin-left: 156px;
+    margin-top: 72px;
     gap: 24px;
 }
 .team {
-    background-color: var(--cloud);
+    background-color: var(--cloud);  
+}
+.team-container {
     padding-top: 120px;
     padding-bottom: 120px;
 }
@@ -205,21 +183,20 @@ background-color: var(--ocean);
     line-height: 1.111111em;
     letter-spacing: 0.72px;
     text-transform: capitalize;
-    padding-bottom: 72px;
     text-align: center;
+    margin-bottom: 72px;
 }
 .team-list {
     display: flex;
     gap: 24px;
-    margin-left: 156px;
 }
 .team-list-item{
     background-color: var(--white);
     border-radius: 0px 0px 4px 4px;
-background: var(--WHITE, #FFF);
-box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 
-                       0px 1px 1px 0px rgba(46, 47, 66, 0.16), 
-                       0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+    background: var(--white);
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 
+                        0px 1px 1px 0px rgba(46, 47, 66, 0.16), 
+                        0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 .team-header-name {
     color: var(--navyblue);
@@ -228,7 +205,10 @@ box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     line-height: 1.2em;
     letter-spacing: 0.4px;
     text-align: center;
-    padding-top: 32px;
+    margin-bottom: 8px;
+}
+.team-item-details {
+    padding:32px 16px
 }
 .team-item-position {
     color: var(--slate);
@@ -236,8 +216,6 @@ box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     line-height: 1.5em;
     letter-spacing: 0.32px;
     text-align: center;
-    padding-top: 8px;
-    padding-bottom: 32px;
 }
 .portfolio-item-button {
     border-radius: 4px;
@@ -250,35 +228,31 @@ box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     letter-spacing: 0.64px;
     padding: 12px 24px;
 }
-.portfolio {
-    margin-left: 427px;
+.portfolio-container {
     padding-top: 96px;
     padding-bottom: 72px;
 }
 .portfolio-projects-list {
-    display: inline-flex;
+    display: flex;
     gap: 24px;
-    align-items: center;
+    justify-content: center;
 }
 .section-projects1-list{
     gap: 8px;
-    margin-left: 156px;
     display: flex;
 }
-.projects2 {
+.project2-container {
     padding: 48px 0;
 }
 .section-projects2-list {
     gap: 8px;
-    margin-left: 156px;
     display: flex;
 }
 .section-projects3-list{
     gap: 8px;
-    margin-left: 156px;
     display: flex;
 }
-.projects3 {
+.project3-container {
     padding-bottom: 120px;
 }
 .section-project-list-item {
@@ -291,15 +265,10 @@ box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     font-weight: 500;
     line-height: 1.2em;
     letter-spacing: 0.4px;
-    padding-top: 32px;
-    padding-left: 16px;
-    padding-right: 16px;
+    margin-bottom: 8px;
 }
-.sub-section-project-header-text {
-    padding-bottom: 32px;
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-top: 8px;
+.project-item-details{
+    padding: 32px 16px;
 }
 .section-project
 .sub-section-project-header-text {
@@ -321,17 +290,11 @@ box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     font-size: 16px;
     line-height: 1.5em; 
     letter-spacing: 0.32px;
-    text-align:left;
-    margin-left: 156px;
-    padding-top: 17.5px;
+    text-align: left;
+    margin-top: 17.5px;
 }
 footer {
-    width: 1440px;
-    height: 312px;
-    flex-shrink: 0;
     background: var(--navy-blue);
-    padding-top: 101.5px;
-    padding-bottom: 100px;
 }
 .span-web {
     color: var(--iris);
@@ -341,7 +304,6 @@ footer {
     line-height: 1.16667em; 
     letter-spacing: 0.54px;
     text-transform: uppercase;
-    margin-left: 156px;
 }
 .span-studio {
     color: var(--cloud);
@@ -351,4 +313,8 @@ footer {
     line-height: 1.16667em;
     letter-spacing: 0.54px;
     text-transform: uppercase;
+}
+.footer-container {
+    padding-top: 101.5px;
+    padding-bottom: 100px;
 }
