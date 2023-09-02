@@ -22,6 +22,16 @@ button {
 }
 address {
     font-size: normal;
+} 
+/*hw3--b3 */
+ul, li {
+    margin-top: 0;
+    margin-left: 0;
+}
+/*hw4--b4 */
+ul {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 :root {
 --iris: #4D5AE5;
@@ -37,14 +47,46 @@ address {
 --white :#FFFFFF;
 --dairy :#FCFCFC;
 }
+/*hw3
+.container {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 0 15px;
+}*/
+/* hw3 */
 .header {
     background-color: var(--white);
     border-bottom: 1px solid var(--cornflower);
-}
-.nav-list {
+    
     width: 1440px;
-    height: 72px;   
+    display: flex;
 }
+/*hw3*/
+.nav {
+    
+    display: flex;
+}
+
+.nav-logo {
+    margin-top: 25.5px;
+    margin-bottom: 25.5px;
+
+    margin-left: 156px; 
+    margin-right: 76px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+/*hw3*/
+.nav-list {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+
 .nav-list-item-link {
     color: var(--navy-blue);
     font-size: 16px;
@@ -65,6 +107,18 @@ address {
     line-height: 1.5em;
     letter-spacing: 0.32px;
 }
+/*hw3*/
+.address{
+    margin-top: 24px; 
+    margin-bottom: 24px;
+    margin-left: 332px;
+    margin-right: 156px;
+}
+/*hw3*/
+.address-list{
+    display: flex;
+    gap: 40px;
+}
 .hero {
     width: 1440px;
     height: 600px;
@@ -77,6 +131,10 @@ address {
     font-size: 56px;
     line-height: 1.07143em;
     letter-spacing: 1.12px;
+
+    text-align: center;
+    padding-top: 188px;
+    padding-bottom: 48px;
 }
 .hero-cta {
     border-radius: 4px;
@@ -88,6 +146,13 @@ address {
     line-height: 1.5em;
     letter-spacing: 0.64px;
     padding: 16px 32px;
+
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 10px;
+
+    margin-left: 636px;
+
 }
 .hero-cta:hover{
 background-color: var(--ocean);
@@ -95,6 +160,22 @@ background-color: var(--ocean);
 .feature {
     background-color: var(--white);
     color: var(--navy-blue);
+
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+.feature-list {
+    display: flex;
+    gap: 24px;
+}
+.content-container {
+    width:1128px;
+    height: 104px;
+    margin-left: 156px;
+    margin-right: 156px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
 }
 .feature-text {
     background-color: var(--white);
@@ -103,16 +184,27 @@ background-color: var(--ocean);
     font-weight: 500;
     line-height: 1.2em;
     letter-spacing: 0.4px;
+    padding-bottom: 8px;
+    
 }
 .sub-feature-text {
     color: var(--slate);
     font-size: 16px;
     line-height: 1.5em;
     letter-spacing: 0.32px;
+
+    width: 264px;
 }
 .product {
     background-color: var(--white);
+
+    padding-top: 0;
+    padding-bottom: 120px;
+    margin-top: 0;
+
+
 }
+
 .product-header-text{
     background-color: var(--white);
     color: var(--slate);
@@ -120,32 +212,64 @@ background-color: var(--ocean);
     line-height: 1.111111em;
     letter-spacing: 0.72px;
     text-transform: capitalize;
+    text-align: center;
 }
+.product-list {
+    display: inline-flex;
+    padding-top: 72px;
+    margin-left: 156px;
+    gap: 24px;
+}
+
 .team {
     background-color: var(--cloud);
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 .team-header-text-title {
-    background-color: var(--white);
+
     color: var(--slate);
     font-size: 36px;
     line-height: 1.111111em;
     letter-spacing: 0.72px;
     text-transform: capitalize;
+
+    padding-bottom: 72px;
+    text-align: center;
+}
+.team-list {
+    display: flex;
+    gap: 24px;
+    margin-left: 156px;
+}
+.team-list-item{
+    background-color: var(--white);
+    border-radius: 0px 0px 4px 4px;
+background: var(--WHITE, #FFF);
+box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 
+                       0px 1px 1px 0px rgba(46, 47, 66, 0.16), 
+                       0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+
 }
 .team-header-name {
-    background-color: var(--white);
+
     color: var(--navyblue);
     font-size: 20px;
     font-weight: 500;
     line-height: 1.2em;
     letter-spacing: 0.4px;
+    text-align: center;
+    padding-top: 32px;
+
 }
 .team-item-position {
-    background-color: var(--white);
     color: var(--slate);
     font-size: 16px;
     line-height: 1.5em;
     letter-spacing: 0.32px;
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 32px;
 }
 .portfolio-item-button-active-button {
     border-radius: 4px;
@@ -160,6 +284,10 @@ background-color: var(--ocean);
     line-height: 1.5em;
     letter-spacing: 0.64px;
     padding: 12px 24px;
+}
+/* hw3-b17 not snure on this*/
+.postfolio-list-item {
+    border-bottom: 1px solid var(--light-slate);
 }
 .portfolio-item-button {
     border-radius: 4px;
@@ -199,12 +327,16 @@ background-color: var(--ocean);
     line-height: 1.5em; 
     letter-spacing: 0.32px;
     text-align:left;
+    margin-left: 156px;
+    padding-top: 17.5px;
 }
 footer {
     width: 1440px;
     height: 312px;
     flex-shrink: 0;
     background: var(--navy-blue);
+    padding-top: 101.5px;
+    padding-bottom: 100px;
 }
 .span-web {
     color: var(--iris);
@@ -214,6 +346,8 @@ footer {
     line-height: 1.16667em; 
     letter-spacing: 0.54px;
     text-transform: uppercase;
+    margin-left: 156px;
+
 }
 .span-studio {
     color: var(--cloud);
@@ -223,4 +357,5 @@ footer {
     line-height: 1.16667em;
     letter-spacing: 0.54px;
     text-transform: uppercase;
+
 }
